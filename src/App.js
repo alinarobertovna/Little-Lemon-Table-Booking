@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
 import About from './components/About';
+import Menu from './components/Menu';
 
 
-const Menu = () => <div>Наше меню</div>;
 const Reservation = () => <div>Бронирование столика</div>;
 const Contact = () => <div>Наши контакты</div>;
 

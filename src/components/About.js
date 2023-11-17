@@ -10,7 +10,7 @@ const ReservationButton = () => (
 const About = () => (
   <section className="bg-#495E57 py-16">
     <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-8">
-      {/* Левая колонка с текстом и кнопкой */}
+      {/* Left column with some text */}
       <div className="lg:w-1/2">
         <h2 className="text-3xl font-semibold mb-4 text-white">About us</h2>
         <p style={{ color: '#edefee' }} className="text-lg lg:text-xl text-justify mb-8">
@@ -22,7 +22,7 @@ const About = () => (
         <ReservationButton />
       </div>
 
-      {/* Правая колонка с изображением */}
+      {/* Right column with image */}
       <div className="lg:w-1/2">
         <img
           src={"/hero-image-2.jpg"}
