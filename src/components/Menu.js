@@ -21,7 +21,7 @@ const Menu = () => {
   ];
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16" id="menu">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {menuItems.map(item => (
           <MenuItem key={item.id} image={item.image} description={item.description} />

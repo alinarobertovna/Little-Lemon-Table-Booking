@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const ReservationButton = () => (
-    <Link to="/Reservation" className="bg-yellow-500 text-black py-3 px-6 rounded-full mb-8 text-lg lg:text-xl hover:bg-yellow-600">
-      Reserve table
-    </Link>
-  );
+  <Link to="reservation-section" smooth={true} duration={500} offset={-70} className="bg-yellow-500 text-black py-3 px-6 rounded-full mb-8 text-lg lg:text-xl hover:bg-yellow-600">
+    Reserve table
+  </Link>
+);
 
 const About = () => (
-  <section className="bg-#495E57 py-16">
+  <section className="bg-#495E57 py-16" id="about">
     <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-8">
       {/* Left column with some text */}
       <div className="lg:w-1/2">
@@ -21,7 +21,7 @@ const About = () => (
         </p>
         <ReservationButton />
       </div>
-
+      <br></br>
       {/* Right column with image */}
       <div className="lg:w-1/2">
         <img
