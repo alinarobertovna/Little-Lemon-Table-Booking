@@ -84,7 +84,7 @@ const Nav = () => {
         {/* Desktop screens */}
         <ul className="hidden lg:flex space-x-4">
           <li>
-            <Link to="/" className="text-green-800">Home</Link>
+            <Link to="/About" className="text-green-800">About</Link>
           </li>
           <li>
             <Link to="/Menu" className="text-green-800">Menu</Link>
