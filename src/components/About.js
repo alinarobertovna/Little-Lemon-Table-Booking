@@ -27,7 +27,7 @@ const About = () => (
         <img
           src={"/hero-image-2.jpg"}
           alt="Restaurant"
-          className="w-full h-auto max-w-full lg:max-w-screen-md mx-auto rounded-lg"
+          className="w-full h-auto max-w-full lg:max-w-screen-md mx-auto rounded-2xl"
         />
       </div>
     </div>
