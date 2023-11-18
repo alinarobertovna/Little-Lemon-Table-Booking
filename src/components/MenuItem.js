@@ -8,19 +8,31 @@ const MenuItem = ({ title, image, description, glutenFree, lowCalorie, vegan, pr
     <div className="flex items-center justify-center mt-2">
       {glutenFree && (
         <div className="flex items-center mr-4">
-          <span className="mr-1">🚫</span>
+          <img
+            src="gluten-free.png"  
+            alt="Gluten Free"
+            className="w-6 h-6 mr-1"  
+          />
           <span>Gluten Free</span>
         </div>
       )}
       {lowCalorie && (
         <div className="flex items-center mr-4">
-          <span className="mr-1">🔥</span>
+          <img
+            src="apple.png"  
+            alt="Low Calories"
+            className="w-6 h-6 mr-1"  
+          />
           <span>Low Calories</span>
         </div>
       )}
       {vegan && (
         <div className="flex items-center">
-          <span className="mr-1">🌱</span>
+          <img
+            src="vegan.png"  
+            alt="Vegan"
+            className="w-6 h-6 mr-1"  
+          />
           <span>Vegan</span>
         </div>
       )}
