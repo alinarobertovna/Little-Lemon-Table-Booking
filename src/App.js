@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import About from './components/About';
 import Menu from './components/Menu';
-import Reservation from './components/Reservation';
+import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,13 +18,13 @@ function App() {
           <nav className="flex flex-col lg:flex-row lg:space-x-4 lg:mb-2">
             <Link to="#about" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">About</Link>
             <Link to="#menu" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">Menu</Link>
-            <Link to="#reservation" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">Reservation</Link>
+            <Link to="#booking" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">Reservation</Link>
             <Link to="#footer" smooth className="text-#495E57-500 hover:text-700 text-lg">Footer</Link>
           </nav>
         </header>
         <About />
         <Menu />
-        <Reservation />
+        <BookingForm />
         <Footer />
       </div>
     </BrowserRouter>

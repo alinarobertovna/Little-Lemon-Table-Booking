@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 const ReservationButton = () => (
-  <Link to="reservation-section" smooth={true} duration={500} offset={-70} className="bg-yellow-500 text-black py-3 px-6 rounded-full mb-8 text-lg lg:text-xl hover:bg-yellow-600">
+  <Link to="booking" smooth className="bg-yellow-500 text-black py-3 px-6 rounded-full mb-8 text-lg lg:text-xl hover:bg-yellow-600 cursor-pointer">
     Reserve table
   </Link>
 );
