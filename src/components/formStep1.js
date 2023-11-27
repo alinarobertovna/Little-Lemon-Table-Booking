@@ -83,8 +83,8 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
             <input
               type="radio"
               name="location"
-              value="indoor"
-              checked={formDataStep1.location === 'indoor'}
+              value="Indoor"
+              checked={formDataStep1.location === 'Indoor'}
               onChange={handleRadioChange}
               className="appearance-none w-5 h-5 border border-black rounded-full checked:bg-gray-800 checked:border-transparent focus:outline-none"
             />
@@ -94,8 +94,8 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
             <input
               type="radio"
               name="location"
-              value="outdoor"
-              checked={formDataStep1.location === 'outdoor'}
+              value="Outdoor"
+              checked={formDataStep1.location === 'Outdoor'}
               onChange={handleRadioChange}
               className="appearance-none w-5 h-5 border border-black rounded-full checked:bg-gray-800 checked:border-transparent focus:outline-none"
             />
@@ -104,7 +104,6 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
         </div>
       </div>
 
-      {/* Submit button */}
       <div className="col-span-2">
         <button
           type="button"

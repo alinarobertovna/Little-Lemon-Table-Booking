@@ -1,6 +1,6 @@
 import React from "react";
 
-const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, handleSubmit }) => {
+const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, handleNextStep, handleSubmit }) => {
   return (
     <>
       {/* Right Column */}
@@ -57,17 +57,18 @@ const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, hand
         <button
           type="button"
           onClick={handlePreviousStep}
-          className="bg-gray-400 text-black p-2 rounded-md hover:bg-gray-500 w-full"
+          className="bg-#495E57 text-white p-2 rounded-md hover:bg-black w-full"
         >
           Back
         </button>
       </div>
       <div className="col-span-1">
         <button
-          type="submit"
+          type="button"
           className="bg-yellow-500 text-black p-2 rounded-md hover:bg-yellow-600 w-full"
+          onClick={handleNextStep}
         >
-          Submit
+          Next
         </button>
       </div>
     </>

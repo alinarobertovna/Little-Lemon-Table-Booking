@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Step1 from './formStep1';
 import Step2 from './formStep2';
+import Confirmation from './ReservationConfirm';
 
 const FormManager = () => {
 
@@ -11,7 +12,7 @@ const [formDataStep1, setFormDataStep1] = useState({
   time: '18:00',
   guests: '1',
   occasion: '',
-  location: 'indoor',
+  location: 'Indoor',
 });
 
 const [formDataStep2, setFormDataStep2] = useState({
@@ -41,6 +42,8 @@ const handleInputChangeStep2 = (e) => {
 const handleNextStep = (e) => {
   e.preventDefault();
   setCurrentStep(currentStep + 1);
+  console.log('Next button clicked');
+  console.log('Current Step:', currentStep);
 };
 
 const handlePreviousStep = (e) => {
@@ -48,14 +51,18 @@ const handlePreviousStep = (e) => {
   setCurrentStep(currentStep - 1);
 };
 
+const handleConfirm = () => {
+  alert("Reservation confirmed!");
+};
+
 const handleSubmit = (e) => {
   e.preventDefault();
 };
 
 return (
-  <section className="bg-gray-500 py-16" id="booking">
+  <section className="bg-#495E57 py-16" id="booking">
     <div className="max-w-3xl mx-auto bg-white p-8 rounded-md shadow-md">
-      <h1 className="text-2xl font-semibold mb-4">Reservation Form</h1>
+      <h1 className="text-xl font-semibold mb-4">Make a Reservation</h1> 
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-6">
         {currentStep === 1 && (
           <Step1 
@@ -71,8 +78,17 @@ return (
             formDataStep2={formDataStep2}
             handleInputChangeStep2={handleInputChangeStep2}
             handlePreviousStep={handlePreviousStep}
+            handleNextStep={handleNextStep}
             handleSubmit={handleSubmit}
           />
+        )}
+        {currentStep === 3 && (
+          <Confirmation
+          formDataStep1={formDataStep1}
+          formDataStep2={formDataStep2}
+          handlePreviousStep={handlePreviousStep}
+          handleConfirm={handleConfirm}
+        />
         )}
       </form>
     </div>
