@@ -4,7 +4,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import About from './components/About';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
-import ReservationForm1 from './components/ReservationForm1';
+import FormManager from './components/FormManager';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         </header>
         <About />
         <Menu />
-        <ReservationForm1 />
+        <FormManager />
         <Footer />
       </div>
     </BrowserRouter>
