@@ -9,8 +9,8 @@ const [currentStep, setCurrentStep] = useState(1);
 
 const [formDataStep1, setFormDataStep1] = useState({
   date: '',
-  time: '18:00',
-  guests: '1',
+  time: '',
+  guests: '2',
   occasion: '',
   location: 'Indoor',
 });
@@ -41,9 +41,14 @@ const handleInputChangeStep2 = (e) => {
 
 const handleNextStep = (e) => {
   e.preventDefault();
+  const { date, time } = formDataStep1;
+
+  if (!date || !time) {
+    alert("Please fill in all required fields in Step 1.");
+    return;
+  } else {
   setCurrentStep(currentStep + 1);
-  console.log('Next button clicked');
-  console.log('Current Step:', currentStep);
+  }
 };
 
 const handlePreviousStep = (e) => {

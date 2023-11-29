@@ -15,7 +15,7 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
           className="p-2 border border-gray-300 rounded-md w-full"
           onChange={handleInputChangeStep1}
           value={formDataStep1.date}
-        />
+          required/>
       </div>
 
       <div className="mb-6 col-span-1">
