@@ -5,6 +5,7 @@ import About from './components/About';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
 import FormManager from './components/FormManager';
+//import CustomerReviewsCarousel from './components/CustomerReviews';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Link to="#about" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">About</Link>
             <Link to="#menu" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">Menu</Link>
             <Link to="#booking" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">Reservation</Link>
+            {/* <Link to="#carousel" smooth className="text-#495E57-500 hover:text-700 mb-2 lg:mb-0 lg:mr-4 text-lg">Reviews</Link> */}
             <Link to="#footer" smooth className="text-#495E57-500 hover:text-700 text-lg">Contacts</Link>
           </nav>
         </header>

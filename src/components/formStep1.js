@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handleNextStep, occasions }) => {
+  const [errors, setErrors] = useState({ date: '', time: '' });
+
+  const validateStep1 = (e) => {
+    e.preventDefault();
+  
+    const { date, time } = formDataStep1;
+    const newErrors = {};
+
+    if (!date) {
+      newErrors.date = 'Date is required';
+    } else {
+      newErrors.date = '';
+    }
+    if (!time) {
+      newErrors.time = 'Time is required';
+    } else {
+      newErrors.time = '';
+    }
+
+    setErrors(newErrors);
+    
+    if (!newErrors.date && !newErrors.time) {
+      handleNextStep(e); 
+    }
+  };
+  
+
   return (
     <>
       {/* Left Column */}
@@ -15,7 +42,9 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
           className="p-2 border border-gray-300 rounded-md w-full"
           onChange={handleInputChangeStep1}
           value={formDataStep1.date}
-          required/>
+          required
+        />
+        <div className="text-red-500">{errors.date}</div>
       </div>
 
       <div className="mb-6 col-span-1">
@@ -39,7 +68,7 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
 
       {/* Right Column */}
       <div className="mb-6 col-span-1">
-        <label htmlFor="time" className="block text-sm font-medium text-gray-600">
+      <label htmlFor="time" className="block text-sm font-medium text-gray-600">
           Time
         </label>
         <select
@@ -55,6 +84,7 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
             </option>
           ))}
         </select>
+        <div className="text-red-500">{errors.time}</div>
       </div>
 
       <div className="mb-6 col-span-1">
@@ -107,7 +137,7 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
       <div className="col-span-2">
         <button
           type="button"
-          onClick={handleNextStep}
+          onClick={validateStep1}
           className="bg-yellow-500 text-black p-2 rounded-md hover:bg-yellow-600 w-full"
         >
           Next

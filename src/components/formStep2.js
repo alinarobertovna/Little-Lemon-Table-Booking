@@ -1,6 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, handleNextStep, handleSubmit }) => {
+  const [errors, setErrors] = useState({ firstName: '', lastName: '', email: '' });
+
+  const validateStep2 = (e) => {
+    e.preventDefault();
+
+    const { firstName, lastName, email } = formDataStep2;
+    const newErrors = {};
+
+    if (!firstName) {
+      newErrors.firstName = 'First Name is required';
+    } else {
+      newErrors.firstName = '';
+    }
+
+    if (!lastName) {
+      newErrors.lastName = 'Last Name is required';
+    } else {
+      newErrors.lastName = '';
+    }
+
+    if (!email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = 'Invalid email address';
+    } else {
+      newErrors.email = '';
+    }
+
+    setErrors(newErrors);
+
+    if (!newErrors.firstName && !newErrors.lastName && !newErrors.email) {
+      handleNextStep(e); 
+    }
+  };
+
   return (
     <>
       {/* Right Column */}
@@ -14,6 +49,7 @@ const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, hand
           onChange={handleInputChangeStep2}
           value={formDataStep2.firstName}
         />
+        <div className="text-red-500">{errors.firstName}</div>
       </div>
 
       <div className="mb-1 col-span-1">
@@ -26,6 +62,7 @@ const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, hand
           onChange={handleInputChangeStep2}
           value={formDataStep2.lastName}
         />
+        <div className="text-red-500">{errors.lastName}</div>
       </div>
 
       {/* Left Column */}
@@ -39,6 +76,7 @@ const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, hand
           onChange={handleInputChangeStep2}
           value={formDataStep2.email}
         />
+        <div className="text-red-500">{errors.email}</div>
       </div>
 
       <div className="mb-1 col-span-1">
@@ -66,7 +104,7 @@ const Step2 = ({ formDataStep2, handleInputChangeStep2, handlePreviousStep, hand
         <button
           type="button"
           className="bg-yellow-500 text-black p-2 rounded-md hover:bg-yellow-600 w-full"
-          onClick={handleNextStep}
+          onClick={validateStep2}
         >
           Next
         </button>
