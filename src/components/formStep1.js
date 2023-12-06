@@ -69,23 +69,24 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
       {/* Right Column */}
       <div className="mb-6 col-span-1">
       <label htmlFor="time" className="block text-sm font-medium text-gray-600">
-          Time
-        </label>
-        <select
-          id="time"
-          name="time"
-          className="p-2 border border-gray-300 rounded-md w-full"
-          onChange={handleInputChangeStep1}
-          value={formDataStep1.time}
-        >
-          {['6:00 pm', '7:00 pm', '8:00 pm', '9:00 pm', '10:00 pm'].map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
-        </select>
-        <div className="text-red-500">{errors.time}</div>
-      </div>
+        Time
+      </label>
+      <select
+        id="time"
+        name="time"
+        className="p-2 border border-gray-300 rounded-md w-full"
+        onChange={handleInputChangeStep1}
+        value={formDataStep1.time}
+      >
+      <option disabled value="">-- Select Time Slot --</option>
+      {['6:00 pm', '7:00 pm', '8:00 pm', '9:00 pm', '10:00 pm'].map((time) => (
+        <option key={time} value={time}>
+          {time}
+        </option>
+      ))}
+    </select>
+    <div className="text-red-500">{errors.time}</div>
+    </div>
 
       <div className="mb-6 col-span-1">
         <label htmlFor="occasion" className="block text-sm font-medium text-gray-600">
