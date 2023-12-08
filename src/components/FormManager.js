@@ -10,7 +10,7 @@ const [currentStep, setCurrentStep] = useState(1);
 const [formDataStep1, setFormDataStep1] = useState({
   date: '',
   time: '',
-  guests: '2',
+  guests: '',
   occasion: 'Anniversary',
   location: 'Indoor',
 });

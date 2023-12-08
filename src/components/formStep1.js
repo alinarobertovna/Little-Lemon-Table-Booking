@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handleNextStep, occasions }) => {
-  const [errors, setErrors] = useState({ date: '', time: '' });
+  const [errors, setErrors] = useState({ date: '', time: '', guests: '' });
 
   const validateStep1 = (e) => {
     e.preventDefault();
   
-    const { date, time } = formDataStep1;
+    const { date, time, guests } = formDataStep1;
     const newErrors = {};
 
     if (!date) {
@@ -19,10 +19,15 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
     } else {
       newErrors.time = '';
     }
+    if (!guests) {
+      newErrors.guests = 'Number of guests is required';
+    } else {
+      newErrors.guests = '';
+    }
 
     setErrors(newErrors);
     
-    if (!newErrors.date && !newErrors.time) {
+    if (!newErrors.date && !newErrors.time && !newErrors.guests) {
       handleNextStep(e); 
     }
   };
@@ -48,23 +53,25 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
       </div>
 
       <div className="mb-6 col-span-1">
-        <label htmlFor="guests" className="block text-sm font-medium text-gray-600">
-          Number of Guests
-        </label>
-        <select
-          id="guests"
-          name="guests"
-          className="p-2 border border-gray-300 rounded-md w-full"
-          onChange={handleInputChangeStep1}
-          value={formDataStep1.guests}
-        >
-          {[1, 2, 3, 4].map((number) => (
-            <option key={number} value={String(number)}>
-              {number}
-            </option>
-          ))}
-        </select>
-      </div>
+      <label htmlFor="guests" className="block text-sm font-medium text-gray-600">
+        Number of Guests
+      </label>
+      <select
+        id="guests"
+        name="guests"
+        className="p-2 border border-gray-300 rounded-md w-full"
+        onChange={handleInputChangeStep1}
+        value={formDataStep1.guests}
+      >
+      <option disabled value="">-- Select Number of Guests --</option>
+        {[1, 2, 3, 4].map((number) => (
+      <option key={number} value={String(number)}>
+        {number}
+      </option>
+      ))}
+    </select>
+    <div className="text-red-500">{errors.guests}</div>
+    </div>
 
       {/* Right Column */}
       <div className="mb-6 col-span-1">
