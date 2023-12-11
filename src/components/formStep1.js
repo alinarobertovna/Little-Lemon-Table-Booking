@@ -63,7 +63,7 @@ const Step1 = ({ formDataStep1, handleInputChangeStep1, handleRadioChange, handl
         onChange={handleInputChangeStep1}
         value={formDataStep1.guests}
       >
-      <option disabled value="">-- Select Number of Guests --</option>
+      <option disabled value="">--Select Number of Guests--</option>
         {[1, 2, 3, 4].map((number) => (
       <option key={number} value={String(number)}>
         {number}

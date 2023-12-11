@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ReservationConfirm = ({ formDataStep1, formDataStep2, handlePreviousStep, handleConfirm }) => {
+const ReservationConfirm = ({ formDataStep1, formDataStep2, handlePreviousStep }) => {
+  const [isConfirmed, setIsConfirmed] = useState(false);
+
+  const handleConfirm = () => {
+    setIsConfirmed(true); 
+  };
+
+  if (isConfirmed) {
+    return (
+      <div className="mb-6 col-span-2">
+      <div className="bg-white p-6 md:max-w-md mx-auto my-10 rounded shadow-lg text-center">
+      <div className="mb-4">
+        <svg
+        className="mx-auto w-16 h-16"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="#495E57"
+        strokeWidth={2}
+        style={{ color: "#495E57" }} 
+        >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <h3 className="text-lg leading-6 font-medium text-gray-900">Thank you for your reservation!</h3>
+    <p className="mt-2 text-sm text-gray-500">Your reservation details have been confirmed</p>
+    </div>
+    </div>
+    );
+  }
   return (
     <>
       <div className="mb-6 col-span-2">
@@ -38,20 +67,18 @@ const ReservationConfirm = ({ formDataStep1, formDataStep2, handlePreviousStep, 
         </p>
       </div>
 
-      <div className="col-span-1">
+      <div className="flex justify-between">
         <button
           type="button"
           onClick={handlePreviousStep}
-          className="bg-#495E57 text-white p-2 rounded-md hover:bg-black w-full"
+          className="bg-#495E57 text-white p-2 rounded-md hover:bg-black w-full ml-2"
         >
           Back
         </button>
-      </div>
-      <div className="col-span-1">
         <button
           type="button"
           onClick={handleConfirm}
-          className="bg-yellow-500 text-black p-2 rounded-md hover:bg-yellow-600 w-full"
+          className="bg-yellow-500 text-black p-2 rounded-md hover:bg-yellow-600 w-full ml-2"
         >
           Confirm
         </button>

@@ -49,10 +49,6 @@ const handlePreviousStep = (e) => {
   setCurrentStep(currentStep - 1);
 };
 
-const handleConfirm = () => {
-  alert("Reservation confirmed!");
-};
-
 const handleSubmit = (e) => {
   e.preventDefault();
 };
@@ -85,7 +81,7 @@ return (
           formDataStep1={formDataStep1}
           formDataStep2={formDataStep2}
           handlePreviousStep={handlePreviousStep}
-          handleConfirm={handleConfirm}
+          
         />
         )}
       </form>
