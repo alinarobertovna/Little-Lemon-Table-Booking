@@ -14,6 +14,8 @@ Footer: A contact section that displays the restaurant's contact information, in
 
 Responsive Design: The website is fully responsive and looks great on various devices, including desktops, tablets, and mobile phones.
 
+React Multi-Step Booking Form with client-side validation managed with React useState Hook.
+
 ## **Technologies Used**
 
 React: A JavaScript library for building user interfaces.
@@ -38,4 +40,6 @@ Start the project:
 <pre>npm start</pre>
 
 Open your web browser and visit http://localhost:3000 to view the website locally.
+
+Live website can be seen here: https://little-lemon-restaurant-ox41.onrender.com/
 
