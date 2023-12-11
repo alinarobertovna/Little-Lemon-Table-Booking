@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+## **Little Lemon Restaurant Website**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple restaurant website project built using React and Tailwind CSS. The goal of this project is to create an elegant and user-friendly website for a restaurant that showcases their menu, provides information about the restaurant, and allows customers to make reservations.
 
-## Available Scripts
+## **Features**
 
-In the project directory, you can run:
+About: A welcoming section that introduces the restaurant.
 
-### `npm start`
+Menu: A menu page that lists all the dishes and drinks offered by the restaurant. Each menu item includes a name, description, price, and an optional image.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Reservation: A reservation section that allows customers to book a table by providing their name, contact information, date, time, and the number of guests. The system displays a confirmation message after receiving a reservation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Footer: A contact section that displays the restaurant's contact information, including the phone number, email, and social media accounts.
 
-### `npm test`
+Responsive Design: The website is fully responsive and looks great on various devices, including desktops, tablets, and mobile phones.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Multi-Step Booking Form with client-side validation managed with React useState Hook.
 
-### `npm run build`
+## **Technologies Used**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React: A JavaScript library for building user interfaces.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tailwind CSS: A utility-first CSS framework for quickly designing responsive web applications.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Installation**
 
-### `npm run eject`
+Clone the repository to your local machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<pre>
+git clone https://github.com/yourusername/little-lemon-restaurant.git
+</pre>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to project directory:
+<pre>cd little-lemon-restaurant</pre>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install project dependencies:
+<pre>npm install</pre>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start the project:
+<pre>npm start</pre>
 
-## Learn More
+Open your web browser and visit http://localhost:3000 to view the website locally.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Live website can be seen here: https://little-lemon-restaurant-ox41.onrender.com/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
