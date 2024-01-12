@@ -27,7 +27,7 @@ Tailwind CSS: A utility-first CSS framework for quickly designing responsive web
 Clone the repository to your local machine:
 
 <pre>
-git clone https://github.com/yourusername/little-lemon-restaurant.git
+git clone https://github.com/alinarobertovna/Little-Lemon-Table-Booking
 </pre>
 
 Navigate to project directory:
